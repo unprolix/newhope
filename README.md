@@ -15,24 +15,24 @@ reference C implementation on any given platform.
 
 This project uses the Haskell build manager "stack" to produceː
 
- * A NewHope library intended for general use.
+ * `Crypto.NewHope`, a library intended for general use.
 
- * "PQCgenKAT" -- a binary which generates KAT (Known Answer Test)
+ * `PQCgenKAT` -- a binary which generates KAT (Known Answer Test)
   files in the format required by the NIST PQC project. Invoke this
   binary with the single argument "all" to generate all of the KAT
   files.
 
- * "speed" -- a binary which runs performance tests of some of the
+ * `speed` -- a binary which runs performance tests of some of the
   NewHope functionality. These tests correspond to largely equivalent
   tests in the reference NewHope C code.
 
-In addition, the project contains a fair number of automatically-
-evaluated tests that cover a large swath of the important
+In addition, the project contains a fair number of
+automatically-evaluated tests that cover a large swath of the important
 functionality implemented, including that tested by the "test"
 binaries built by the reference C source, and including comparison
 between the KAT output that we produce and that produced by the
 reference C implementation. To run the tests and view the results,
-execute "stack test" at a command line.
+execute `stack test` at a command line.
 
 लोकाः समस्ताः सुखिनोभवंतु
 
