@@ -1,0 +1,4 @@
+The .cfg files in this directory are used by test cases to help
+validate this library against results from the NewHope reference C
+implementation, an instrumented version of which was used to generate
+the files.
