@@ -1,4 +1,4 @@
-This is a Haskell implementation of the [NewHope key exchange
+This package provides a library for the [NewHope key exchange
 protocol](https://newhopecrypto.org/). It has been made via
 examination of the official NewHope project's [public domain C
 reference code](https://github.com/newhopecrypto/newhope) and the
@@ -13,7 +13,7 @@ obvious!) flaws.  In addition, it has not been optimized for
 performance and at this stage is probably quite a bit slower than the
 reference C implementation on any given platform.
 
-This project uses the Haskell build manager "stack" to produceː
+This project uses the build manager "stack" to produceː
 
  * `Crypto.NewHope`, a library intended for general use.
 

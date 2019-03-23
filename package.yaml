@@ -15,7 +15,7 @@ synopsis:            Library implementing the NewHope cryptographic key-exchange
 category:            Library, Cryptography
 
 description:
-    This is a Haskell implementation of the NewHope key exchange
+    This package provides a library for the NewHope key exchange
     protocol. It has been made via examination of the official NewHope
     project's public domain C reference code and the author is not
     affiliated with that team or with NIST. For further details please
