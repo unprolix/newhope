@@ -6,8 +6,8 @@ github:		     https://github.com/unprolix/newhope
 author:              "Jeremy Bornstein"
 maintainer:          "jeremy@bornstein.org"
 copyright:           "© 2019 Jeremy Bornstein"
-homepage: 	     https://github.com/unprolix/newhope#readme
-bug-reports:	     https://github.com/unprolix/newhope/issues
+homepage: 	     https://github.com/unprolix/newhope#README.md
+bug-reports:	     https://github.com/unprolix/newhope/issuse
 
 
 # Metadata for publishing
@@ -21,7 +21,7 @@ description:
     project's public domain C reference code and the author is not
     affiliated with that team or with NIST.
     .
-    This codebase has not been reviewed by anyone other than the
+    This codebase has not yet been reviewed by anyone other than the
     author.  Until such time as it has been competently reviewed,
     please consider it as a draft implementation only, and do not rely
     on it for actual securtiy in practice. Judged by comparison with
@@ -112,17 +112,17 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - AES              >= 0.2  && < 0.3
+    - AES
 #   - newhope          # use source because we use internals
-    - bytestring       >= 0.10 && < 0.11
-    - containers       >= 0.5  && < 0.7
-    - deepseq          >= 1.4  && < 1.5
-    - mtl              >= 2.2  && < 2.3
+    - bytestring
+    - containers
+    - deepseq
+    - mtl
     - system-fileio    >= 0.3  && < 90.4
     - system-filepath  >= 0.4  && < 0.5
     - tasty-quickcheck >= 0.10 && < 0.11
     - text             >= 1.2  && < 1.3
-    - vector           >= 0.12 && < 0.13
+    - vector
 
  speed:
     main:              Speed.hs
@@ -135,14 +135,14 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - AES              >= 0.2  && < 0.3
-    - bytestring       >= 0.10 && < 0.11
-    - containers       >= 0.5  && < 0.7
-    - deepseq          >= 1.4  && < 1.5
-    - mtl              >= 2.2  && < 2.3
+    - AES
+    - bytestring
+    - containers
+    - deepseq
+    - mtl
 #   - newhope          # use source because we use internals
-    - tasty-quickcheck >= 0.10 && < 0.11
-    - vector           >= 0.12 && < 0.13
+    - tasty-quickcheck
+    - vector
 
 tests:
   libtest:
@@ -157,25 +157,25 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - AES                    >= 0.2  && < 0.3
+    - AES
     - HUnit                  >= 1.6  && < 1.7
     - QuickCheck             >= 2.11 && < 2.13
-    - bytestring             >= 0.10 && < 0.11
-    - containers             >= 0.5  && < 0.7
-    - deepseq                >= 1.4  && < 1.5
+    - bytestring
+    - containers
+    - deepseq
     - hspec                  >= 2.5  && < 2.7
-    - mtl                    >= 2.2  && < 2.3
+    - mtl
 #   - newhope                # use source because we use internals
     - parallel               >= 3.2  && < 3.3
     - raw-strings-qq         >= 1.1  && < 1.2
     - statistics             >= 0.14 && < 0.16
-    - system-fileio          >= 0.3  && < 0.4
-    - system-filepath        >= 0.4  && < 0.5
+    - system-fileio
+    - system-filepath
     - tasty                  >= 1.1  && < 1.3
     - tasty-expected-failure >= 0.11 && < 0.12
     - tasty-hunit            >= 0.10 && < 0.11
-    - tasty-quickcheck       >= 0.10 && < 0.11
-    - text                   >= 1.2  && < 1.3
+    - tasty-quickcheck
+    - text
     - trifecta               >= 2    && < 2.0
-    - vector                 >= 0.12 && < 0.13
+    - vector
 
