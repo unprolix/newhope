@@ -30,6 +30,7 @@ import qualified Data.ByteString         as BS
 import qualified Data.ByteString.Builder as Builder
 import qualified Data.ByteString.Char8   as BSC
 import qualified Data.ByteString.Lazy    as BSL
+import           Data.Semigroup          ((<>))
 import           Data.Word
 
 

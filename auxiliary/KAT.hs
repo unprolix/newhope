@@ -29,6 +29,7 @@ import           Data.ByteString.Builder
 import qualified Data.ByteString.Char8      as BSC
 import qualified Data.ByteString.Lazy.Char8 as BSLC
 import           Data.Char
+import           Data.Semigroup             ((<>))
 
 import           AuxUtil
 import qualified Crypto.NewHope                  as NewHope

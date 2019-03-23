@@ -44,6 +44,7 @@ module Crypto.NewHope.Internal.SeedExpander where
 import           Codec.Crypto.AES
 import           Control.Monad.Except
 import           Data.Bits
+import           Data.Semigroup          ((<>))
 import qualified Data.ByteString         as BS
 import qualified Data.ByteString.Builder as Builder
 import qualified Data.ByteString.Lazy    as BSL

@@ -20,6 +20,7 @@ import           Data.ByteString.Builder
 import qualified Data.ByteString.Char8      as BSC
 import qualified Data.ByteString.Lazy       as BSL
 import qualified Data.ByteString.Lazy.Char8 as BSLC
+import           Data.Semigroup             ((<>))
 import           Numeric
 
 import MiscUtils

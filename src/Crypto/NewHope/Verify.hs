@@ -26,6 +26,7 @@ module Crypto.NewHope.Verify where
 import           Data.Bits
 import qualified Data.ByteString as BS
 import           Data.Foldable
+import           Data.Semigroup  (Semigroup, (<>))
 
 
 
@@ -37,7 +38,7 @@ import           Data.Foldable
 -- | If the passed Bool is True, return the first of the following
 -- arguments. If it is False, return the second of the following
 -- arguments. Execution of this function should take constant time.
-constantTimeChoose :: Monoid a => Bool -> a -> a -> a
+constantTimeChoose :: (Monoid a, Semigroup a) => Bool -> a -> a -> a
 constantTimeChoose !v !a !b = (if v then a else mempty) <> (if v' then b else mempty)
   where
     !v' = not v
