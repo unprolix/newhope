@@ -55,7 +55,7 @@ newtype Seed = Seed BS.ByteString deriving Eq
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData Seed
   where
-    rnf (Seed seedData) = seq seedData ()
+    rnf (Seed bs) = rnf bs
 
 
 -- | Extract data from the Seed

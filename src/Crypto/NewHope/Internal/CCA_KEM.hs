@@ -62,7 +62,7 @@ newtype SharedSecret = SharedSecret BS.ByteString deriving Eq
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData SharedSecret
   where
-    rnf (SharedSecret skData) = deepseq skData ()
+    rnf (SharedSecret bs) = rnf bs
 
 
 -- | Create a SharedSecret from a ByteString.
@@ -87,7 +87,7 @@ newtype PublicKey = PublicKey BS.ByteString deriving Eq
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData PublicKey
   where
-    rnf _pk = ()
+    rnf (PublicKey bs) = rnf bs
 
 -- | Construct PublicKey from raw data
 makePublicKey :: BS.ByteString -> PublicKey
@@ -157,7 +157,7 @@ newtype SecretKey = SecretKey BS.ByteString deriving Eq
 -- | We need this instance so that we can deepseq this data during performance tests.
 instance NFData SecretKey
   where
-    rnf _sk = ()
+    rnf (SecretKey bs) = rnf bs
 
 -- | Construct from raw data
 makeSecretKey :: BS.ByteString -> SecretKey
@@ -248,7 +248,7 @@ newtype CipherText = CipherText BS.ByteString deriving Eq
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData CipherText
   where
-    rnf _sk = ()
+    rnf (CipherText bs) = rnf bs
 
 
 -- | Construct from raw data. composed of CPA_PKE.cipherTextBytes

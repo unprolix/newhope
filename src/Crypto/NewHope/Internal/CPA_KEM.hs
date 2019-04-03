@@ -55,7 +55,7 @@ newtype PublicKey = PublicKey BS.ByteString
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData PublicKey
   where
-    rnf (PublicKey pkData) = seq pkData ()
+    rnf (PublicKey bs) = rnf bs
 
 
 -- | Construct a PublicKey from a ByteString of exactly the right
@@ -86,7 +86,7 @@ newtype SecretKey = SecretKey BS.ByteString
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData SecretKey
   where
-    rnf (SecretKey skData) = seq skData ()
+    rnf (SecretKey bs) = rnf bs
 
 
 -- | Construct a SecretKey from a ByteString of exactly the right
@@ -115,7 +115,7 @@ newtype CipherText = CipherText BS.ByteString
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData CipherText
   where
-    rnf (CipherText ctData) = seq ctData ()
+    rnf (CipherText bs) = rnf bs
 
 
 -- | Construct a CipherText from a ByteString of exactly the right
@@ -145,7 +145,7 @@ newtype SharedSecret = SharedSecret BS.ByteString deriving Eq
 -- | We need this instance so that we can deepseq this data for performance tests.
 instance NFData SharedSecret
   where
-    rnf (SharedSecret ssData) = seq ssData ()
+    rnf (SharedSecret bs) = rnf bs
 
 
 -- | Construct a SharedSecret from a ByteString of length

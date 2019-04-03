@@ -78,6 +78,11 @@ createKey value
   | BS.length value /= keyBytes = error "Incorrect key length"
   | otherwise = Key { getKey = value }
 
+-- | We need this instance so that we can deepseq this data while doing performance tests.
+instance NFData Key
+  where
+    rnf (Key bs) = rnf bs
+
 
 -- * V
 
@@ -105,6 +110,11 @@ incrementV (V v) = let v' = reverse $ BS.unpack v
                        go (i : is)    = (i + 1) : is
                    in V v'''
 
+-- | We need this instance so that we can deepseq this data while doing performance tests.
+instance NFData V
+  where
+    rnf (V bs) = rnf bs
+
 
 -----------------------
 
@@ -117,7 +127,7 @@ data Context = Context { ctxKey           :: Key
 -- | We need this instance so that we can deepseq this data while doing performance tests.
 instance NFData Context
   where
-    rnf Context { ctxKey = key, ctxV = v } = seq key seq v ()
+    rnf Context { ctxKey = key, ctxV = v } = rnf key `seq` rnf v
 
 
 -- | Update the context with new data
