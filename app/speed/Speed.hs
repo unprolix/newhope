@@ -48,7 +48,7 @@ data Null = Null deriving Show
 -- | This instance lets us deepseq, which we need to control execution order during tests.
 instance NFData Null
   where
-    rnf _sk = ()
+    rnf _ = ()
 
 
 testCount :: Int
