@@ -7,7 +7,7 @@ author is not affiliated with that team or with NIST.
 This codebase has not yet been reviewed by anyone other than the
 author.  Until such time as it has been competently reviewed, please
 consider it as a draft implementation only, and do not rely on it for
-actual securtiy in practice. Judged by comparison with the reference
+actual security in practice. Judged by comparison with the reference
 library, it does produce correct results but could contain subtle (or
 obvious!) flaws.  In addition, it has not been optimized for
 performance and at this stage is probably quite a bit slower than the
